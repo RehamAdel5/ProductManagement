@@ -1,0 +1,343 @@
+﻿<!DOCTYPE html>
+<html class="loading" lang="en">
+<!-- BEGIN : Head-->
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <meta name="description" content="Apex admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities.">
+    <meta name="keywords" content="admin template, Apex admin template, dashboard template, flat admin template, responsive admin template, web app">
+    <meta name="author" content="PIXINVENT">
+    <title>Dashboard</title>
+    <link rel="shortcut icon" type="image/x-icon" href="~/app-assets/img/ico/favicon.ico">
+    <link rel="shortcut icon" type="image/png" href="~/app-assets/img/ico/favicon-32.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,700,900%7CMontserrat:300,400,500,600,700,800,900" rel="stylesheet">
+    <!-- BEGIN VENDOR CSS-->
+    <!-- font icons-->
+    <link rel="stylesheet" type="text/css" href="~/app-assets/fonts/feather/style.min.css">
+    <link rel="stylesheet" type="text/css" href="~/app-assets/fonts/simple-line-icons/style.css">
+    <link rel="stylesheet" type="text/css" href="~/app-assets/fonts/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="~/app-assets/vendors/css/perfect-scrollbar.min.css">
+    <link rel="stylesheet" type="text/css" href="~/app-assets/vendors/css/prism.min.css">
+    <link rel="stylesheet" type="text/css" href="~/app-assets/vendors/css/switchery.min.css">
+    <link rel="stylesheet" type="text/css" href="~/app-assets/vendors/css/chartist.min.css">
+    <!-- END VENDOR CSS-->
+    <!-- BEGIN APEX CSS-->
+    <link rel="stylesheet" type="text/css" href="~/app-assets/css-rtl/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="~/app-assets/css-rtl/bootstrap-extended.css">
+    <link rel="stylesheet" type="text/css" href="~/app-assets/css-rtl/colors.css">
+    <link rel="stylesheet" type="text/css" href="~/app-assets/css-rtl/components.css">
+    <link rel="stylesheet" type="text/css" href="~/app-assets/css-rtl/themes/layout-dark.css">
+    <link rel="stylesheet" href="~/app-assets/css-rtl/plugins/switchery.css">
+    <link rel="stylesheet" type="text/css" href="~/app-assets/css-rtl/custom-rtl.css">
+    <!-- END APEX CSS-->
+    <!-- BEGIN Page Level CSS-->
+    <link rel="stylesheet" type="text/css" href="~/app-assets/css-rtl/pages/dashboard1.css">
+    <!-- END Page Level CSS-->
+    <!-- BEGIN: Custom CSS-->
+    <link rel="stylesheet" type="text/css" href="~/assets/css/style-rtl.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.css">
+    <!-- END: Custom CSS-->
+</head>
+<!-- END : Head-->
+<!-- BEGIN : Body-->
+
+<body class="vertical-layout vertical-menu 2-columns  navbar-sticky" data-menu="vertical-menu" data-col="2-columns">
+
+    <nav class="navbar navbar-expand-lg navbar-light header-navbar navbar-fixed">
+        <div class="container-fluid navbar-wrapper">
+            <div class="navbar-header d-flex">
+                <div class="navbar-toggle menu-toggle d-xl-none d-block float-left align-items-center justify-content-center" data-toggle="collapse"><i class="ft-menu font-medium-3"></i></div>
+                <ul class="navbar-nav">
+                    <li class="nav-item mr-2 d-none d-lg-block"><a class="nav-link apptogglefullscreen" id="navbar-fullscreen" href="javascript:;"><i class="ft-maximize font-medium-3"></i></a></li>
+                    <li class="nav-item nav-search">
+                        <a class="nav-link nav-link-search" href="javascript:"><i class="ft-search font-medium-3"></i></a>
+                        <div class="search-input">
+                            <div class="search-input-icon"><i class="ft-search font-medium-3"></i></div>
+                            <input class="input" type="text" placeholder="Explore Apex..." tabindex="0" data-search="template-search">
+                            <div class="search-input-close"><i class="ft-x font-medium-3"></i></div>
+                            <ul class="search-list"></ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="navbar-container">
+                <div class="collapse navbar-collapse d-block" id="navbarSupportedContent">
+                    <ul class="navbar-nav">
+                        
+                        
+                      @*   <li class="dropdown nav-item mr-1">
+                            <a class="nav-link dropdown-toggle user-dropdown d-flex align-items-end" id="dropdownBasic2" href="javascript:;" data-toggle="dropdown">
+                                <div class="user d-md-flex d-none mr-2"><span class="text-right">John Doe</span><span class="text-right text-muted font-small-3">Available</span></div><img class="avatar" src="~/app-assets/img/portrait/small/avatar-s-1.png" alt="avatar" height="35" width="35">
+                            </a>
+                            <div class="dropdown-menu text-left dropdown-menu-right m-0 pb-0" aria-labelledby="dropdownBasic2">
+                               
+                                <div class="dropdown-divider"></div><a class="dropdown-item" href="auth-login.html">
+                                    <div class="d-flex align-items-center"><i class="ft-power mr-2"></i><span>Logout</span></div>
+                                </a>
+                            </div>
+                        </li> *@
+             
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar (Header) Ends-->
+    <!-- ////////////////////////////////////////////////////////////////////////////-->
+    <div class="wrapper">
+
+
+        <!-- main menu-->
+        <!--.main-menu(class="#{menuColor} #{menuOpenType}", class=(menuShadow == true ? 'menu-shadow' : ''))-->
+        <div class="app-sidebar menu-fixed" data-background-color="man-of-steel" data-image="/app-assets/img/sidebar-bg/01.jpg" data-scroll-to-active="true">
+            <!-- main menu header-->
+            <!-- Sidebar Header starts-->
+            <div class="sidebar-header">
+                <div class="logo clearfix">
+                    <a class="logo-text float-left" href="/">
+                        <div class="d-flex flex-column">
+                            <div class="logo-img">
+                                <img src="~/app-assets/img/logos/logo-color-big.png" alt="ProductManagement" />
+                            </div>
+                            <h4 class="mt-2 text text-white text-center text-wrap">Product Management</h4>
+                        </div>
+                       
+                    </a><a class="nav-toggle d-none d-lg-none d-xl-block" id="sidebarToggle" href="javascript:;"><i class="toggle-icon ft-toggle-right" data-toggle="expanded"></i></a><a class="nav-close d-block d-lg-block d-xl-none" id="sidebarClose" href="javascript:;"><i class="ft-x"></i></a>
+                </div>
+            </div>
+            <!-- Sidebar Header Ends-->
+            <!-- / main menu header-->
+            <!-- main menu content-->
+            <div class="sidebar-content main-menu-content">
+                <div class="nav-container">
+                    <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
+                        
+                        <li class="nav-item">
+                            <a asp-controller="Categories" asp-action="Index"><i class="ft-box"></i><span class="menu-title" data-i18n="Services">الفئات</span></a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a asp-controller="Products" asp-action="Index"><i class="ft-package"></i><span class="menu-title" data-i18n="Services">المنتجات</span></a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+            <!-- main menu content-->
+            <div class="sidebar-background"></div>
+            <!-- main menu footer-->
+            <!-- include includes/menu-footer-->
+            <!-- main menu footer-->
+            <!-- / main menu-->
+        </div>
+
+        <div class="main-panel">
+            <!-- BEGIN : Main Content-->
+            <div class="main-content">
+                <div class="content-overlay"></div>
+                <div class="content-wrapper">
+                    <!--Statistics cards Starts-->
+                    @RenderBody()
+                </div>
+            </div>
+            <!-- END : End Main Content-->
+            <!-- BEGIN : Footer-->
+            <footer class="footer undefined undefined">
+                
+            </footer>
+            <!-- End : Footer-->
+            <!-- Scroll to top button -->
+            <button class="btn btn-primary scroll-top" type="button"><i class="ft-arrow-up"></i></button>
+
+        </div>
+    </div>
+    <!-- ////////////////////////////////////////////////////////////////////////////-->
+    <!-- START Notification Sidebar-->
+    <!-- END Notification Sidebar-->
+    <div class="sidenav-overlay"></div>
+    <div class="drag-target"></div>
+    <!-- BEGIN VENDOR JS-->
+    <script src="~/app-assets/vendors/js/vendors.min.js"></script>
+    <script src="~/app-assets/vendors/js/switchery.min.js"></script>
+    <!-- BEGIN VENDOR JS-->
+    <!-- BEGIN PAGE VENDOR JS-->
+    <script src="~/app-assets/vendors/js/chartist.min.js"></script>
+    <!-- END PAGE VENDOR JS-->
+    <!-- BEGIN APEX JS-->
+    <script src="~/app-assets/js/core/app-menu.js"></script>
+    <script src="~/app-assets/js/core/app.js"></script>
+    <script src="~/app-assets/js/notification-sidebar.js"></script>
+    <script src="~/app-assets/js/customizer.js"></script>
+    <script src="~/app-assets/js/scroll-top.js"></script>
+
+    <!-- END APEX JS-->
+    <!-- BEGIN PAGE LEVEL  JS-->
+    <script src="~/app-assets/js/dashboard1.js"></script>
+    <!-- END PAGE LEVEL JS-->
+    <!-- BEGIN: Custom CSS-->
+    <script src="~/assets/js/scripts.js"></script>
+    <!-- Add these scripts to your HTML -->
+    
+    <script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.js"></script>
+    <script src="~/HtmlEditor/tinymceLatest/tinymce.min.js"></script>
+    <script src="~/HtmlEditor/tinymceLatest/jquery.tinymce.min.js"></script> 
+    <script>
+        $(document).ready(function () {
+            $('.table').DataTable();
+
+            $("a[href*='Edit']").addClass("btn btn-warning");
+            $("a[href*='Details']").addClass("btn btn-primary");
+            $("a[href*='Delete']").addClass("btn btn-danger");
+            $("a[href*='Create']").addClass("btn btn-success");
+
+            $("#DataTables_Table_0_length label")?.addClass("d-flex align-items-center");
+            $("select[name='DataTables_Table_0_length']")?.addClass("custom-select custom-select-sm form-control form-control-sm custom-select_size");
+            
+            tinymce.init({
+                selector: '#LongDescEn,#DescEn,#AboutDescEn',
+                plugins: 'image code lists advlist',
+                toolbar_sticky: true,
+                menu: {
+                    file: { title: 'File', items: 'newdocument restoredraft | preview | importword exportpdf exportword | print | deleteallconversations' },
+                    edit: { title: 'Edit', items: 'undo redo | cut copy paste pastetext | selectall | searchreplace' },
+                    view: { title: 'View', items: 'code revisionhistory | visualaid visualchars visualblocks | spellchecker | preview fullscreen | showcomments' },
+                    insert: { title: 'Insert', items: 'image link media addcomment pageembed codesample inserttable | charmap emoticons hr | pagebreak nonbreaking anchor tableofcontents | insertdatetime' },
+                    format: { title: 'Format', items: 'bold italic underline strikethrough superscript subscript codeformat | styles blocks fontfamily fontsize align lineheight | forecolor backcolor | language | removeformat' },
+                    tools: { title: 'Tools', items: 'spellchecker spellcheckerlanguage | a11ycheck code wordcount' },
+                    table: { title: 'Table', items: 'inserttable | cell row column | advtablesort | tableprops deletetable' },
+                    help: { title: 'Help', items: 'help' }
+                },
+                toolbar: [
+                    { name: 'history', items: ['undo', 'redo'] },
+                    { name: 'styles', items: ['styles'] },
+                    { name: 'formatting', items: ['bold', 'italic'] },
+                    { name: 'alignment', items: ['alignleft', 'aligncenter', 'alignright', 'alignjustify'] },
+                    { name: 'indentation', items: ['outdent', 'indent'] },
+                    { name: 'list', items: ['numlist', 'bullist'] }
+                ],
+                /* enable title field in the Image dialog*/
+                image_title: true,
+                /* enable automatic uploads of images represented by blob or data URIs*/
+                automatic_uploads: true,
+                min_height: 360,
+                placeholder: 'Type here...',
+                /*
+                  URL of our upload handler (for more details check: https://www.tiny.cloud/docs/configure/file-image-upload/#images_upload_url)
+                  images_upload_url: 'postAcceptor.php',
+                  here we add custom filepicker only to Image dialog
+                */
+                file_picker_types: 'image',
+                /* and here's our custom image picker*/
+                file_picker_callback: (cb, value, meta) => {
+                    const input = document.createElement('input');
+                    input.setAttribute('type', 'file');
+                    input.setAttribute('accept', 'image/*');
+
+                    input.addEventListener('change', (e) => {
+                        const file = e.target.files[0];
+
+                        const reader = new FileReader();
+                        reader.addEventListener('load', () => {
+                            /*
+                              Note: Now we need to register the blob in TinyMCEs image blob
+                              registry. In the next release this part hopefully won't be
+                              necessary, as we are looking to handle it internally.
+                            */
+                            const id = 'blobid' + (new Date()).getTime();
+                            const blobCache = tinymce.activeEditor.editorUpload.blobCache;
+                            const base64 = reader.result.split(',')[1];
+                            const blobInfo = blobCache.create(id, file, base64);
+                            blobCache.add(blobInfo);
+
+                            /* call the callback and populate the Title field with the file name */
+                            cb(blobInfo.blobUri(), { title: file.name });
+                        });
+                        reader.readAsDataURL(file);
+                    });
+
+                    input.click();
+                },
+                content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:16px }'
+            });
+            tinymce.init({
+                selector: '#LongDescAr,#DescAr,#AboutDescAr',
+                plugins: 'image code lists advlist',
+                toolbar_sticky: true,
+                directionality: 'rtl',
+                menu: {
+                    file: { title: 'File', items: 'newdocument restoredraft | preview | importword exportpdf exportword | print | deleteallconversations' },
+                    edit: { title: 'Edit', items: 'undo redo | cut copy paste pastetext | selectall | searchreplace' },
+                    view: { title: 'View', items: 'code revisionhistory | visualaid visualchars visualblocks | spellchecker | preview fullscreen | showcomments' },
+                    insert: { title: 'Insert', items: 'image link media addcomment pageembed codesample inserttable | charmap emoticons hr | pagebreak nonbreaking anchor tableofcontents | insertdatetime' },
+                    format: { title: 'Format', items: 'bold italic underline strikethrough superscript subscript codeformat | styles blocks fontfamily fontsize align lineheight | forecolor backcolor | language | removeformat' },
+                    tools: { title: 'Tools', items: 'spellchecker spellcheckerlanguage | a11ycheck code wordcount' },
+                    table: { title: 'Table', items: 'inserttable | cell row column | advtablesort | tableprops deletetable' },
+                    help: { title: 'Help', items: 'help' }
+                },
+                toolbar: [
+                    { name: 'history', items: ['undo', 'redo'] },
+                    { name: 'styles', items: ['styles'] },
+                    { name: 'formatting', items: ['bold', 'italic'] },
+                    { name: 'alignment', items: ['alignleft', 'aligncenter', 'alignright', 'alignjustify'] },
+                    { name: 'indentation', items: ['outdent', 'indent'] },
+                    { name: 'list', items: ['numlist', 'bullist'] }
+                ],
+                /* enable title field in the Image dialog*/
+                image_title: true,
+                /* enable automatic uploads of images represented by blob or data URIs*/
+                automatic_uploads: true,
+                min_height: 360,
+                placeholder: 'اكتب هنا...',
+                /*
+                  URL of our upload handler (for more details check: https://www.tiny.cloud/docs/configure/file-image-upload/#images_upload_url)
+                  images_upload_url: 'postAcceptor.php',
+                  here we add custom filepicker only to Image dialog
+                */
+                file_picker_types: 'image',
+                /* and here's our custom image picker*/
+                file_picker_callback: (cb, value, meta) => {
+                    const input = document.createElement('input');
+                    input.setAttribute('type', 'file');
+                    input.setAttribute('accept', 'image/*');
+
+                    input.addEventListener('change', (e) => {
+                        const file = e.target.files[0];
+
+                        const reader = new FileReader();
+                        reader.addEventListener('load', () => {
+                            /*
+                              Note: Now we need to register the blob in TinyMCEs image blob
+                              registry. In the next release this part hopefully won't be
+                              necessary, as we are looking to handle it internally.
+                            */
+                            const id = 'blobid' + (new Date()).getTime();
+                            const blobCache = tinymce.activeEditor.editorUpload.blobCache;
+                            const base64 = reader.result.split(',')[1];
+                            const blobInfo = blobCache.create(id, file, base64);
+                            blobCache.add(blobInfo);
+
+                            /* call the callback and populate the Title field with the file name */
+                            cb(blobInfo.blobUri(), { title: file.name });
+                        });
+                        reader.readAsDataURL(file);
+                    });
+
+                    input.click();
+                },
+                content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:16px }'
+            });
+           
+        });
+    </script>
+    <!-- END: Custom CSS-->
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+<!-- END : Body-->
+
+</html>

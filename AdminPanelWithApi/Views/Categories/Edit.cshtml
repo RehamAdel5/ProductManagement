@@ -1,0 +1,62 @@
+﻿@model Domain.Entities.Category
+
+<div class="row custom-form-container">
+    <div class="col-12">
+        <div class="content-header">تعديل بيانات الفئة</div>
+    </div>
+</div>
+
+<section id="basic-hidden-label-form-layouts">
+    <div class="row match-height custom-form-container">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-content">
+                    <div class="card-body">
+                        <form asp-action="Edit" enctype="multipart/form-data">
+                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                            <div class="form-group">
+                                <label asp-for="TitleAr" class="control-label">العنوان عربي</label>
+                                <input asp-for="TitleAr" class="form-control" />
+                                <span asp-validation-for="TitleAr" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="TitleEn" class="control-label">العنوان انجليزى</label>
+                                <input asp-for="TitleEn" class="form-control" dir="ltr" />
+                                <span asp-validation-for="TitleEn" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="Img" class="control-label">الصورة</label>
+                                <input type="file" accept="image/*" onchange="readURL(this,'ImageView');" id="Img" name="img" class="form-control" />
+                                <img asp-append-version class="mt-2 img-fluid w-50" id="ImageView" src="~/Images/@(Model.Image)" alt="" />
+                                <span asp-validation-for="Image" class="text-danger"></span>
+                            </div>
+                            <input type="hidden" asp-for="Id" />
+
+                            <div class="form-group">
+                                <input type="submit" value="حفظ" class="btn btn-primary" />
+                                <a asp-action="Index" class="btn btn-secondary"><i class="ft-x mr-1"></i>الرجوع</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <script>
+        function readURL(input, target) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $(`#${target}`).attr('src', e.target.result).width(150).height(200);
+                };
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+    </script>
+}
