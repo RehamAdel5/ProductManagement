@@ -13,7 +13,7 @@ namespace AdminPanelWithApi.Controllers
         private readonly IWebHostEnvironment _webHostEnvironment;
         private readonly IImageHelper _imageHelper;
 
-        public CategoriesController(ICategoryRepository categoryRepository, 
+        public CategoriesController(ICategoryRepository categoryRepository,
             IWebHostEnvironment webHostEnvironment,
             IImageHelper imageHelper)
         {
@@ -33,25 +33,26 @@ namespace AdminPanelWithApi.Controllers
         {
             var products = await _categoryRepository.GetProductsByCategoryIdAsync(id);
             TempData["Products"] = JsonConvert.SerializeObject(products);
-            return RedirectToAction("Index", "Products");
+            return RedirectToAction("Index", "Products", new { categoryId = id });
+
         }
 
         // GET: Categorys/Create
         public IActionResult Create()
-        {            
+        {
             return View();
         }
-       
+
 
         // POST: Categorys/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create( Category category, IFormFile? img)
+        public async Task<IActionResult> Create(Category category, IFormFile? img)
         {
             if (ModelState.IsValid)
-            {               
+            {
                 string uploadsFolder = Path.Combine(_webHostEnvironment.WebRootPath, "Images");
                 if (img is not null)
                     category.Image = (await _imageHelper.ProcessImageUpload(img, uploadsFolder)).Item2;
@@ -82,7 +83,7 @@ namespace AdminPanelWithApi.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(Guid id, Category category,IFormFile? img)
+        public async Task<IActionResult> Edit(Guid id, Category category, IFormFile? img)
         {
             if (id != category.Id)
             {
@@ -157,6 +158,6 @@ namespace AdminPanelWithApi.Controllers
         private bool CategoryExists(Guid id)
         {
             return _categoryRepository.GetCategoryAsync(id) is not null;
-        }        
+        }
     }
 }

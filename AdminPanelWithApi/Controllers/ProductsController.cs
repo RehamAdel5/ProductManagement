@@ -27,11 +27,14 @@ namespace AdminPanelWithApi.Controllers
         }
 
         // GET: Products
-        public async Task<IActionResult> Index(Guid? categoryId) { var products = categoryId.HasValue ? 
-                await _productRepository.GetProductsByCategoryId(categoryId.Value) 
+        public async Task<IActionResult> Index(Guid? categoryId)
+        {
+            var products = categoryId.HasValue ?
+                await _productRepository.GetProductsByCategoryId(categoryId.Value)
                 : await _productRepository.ListProducts();
-            ViewBag.Categories = await _categoryRepository.GetAllCategories(); 
-            return View(products); }
+            ViewBag.Categories = await _categoryRepository.GetAllCategories();
+            return View(products);
+        }
 
 
         // GET: Products/Create
